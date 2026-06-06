@@ -1,0 +1,28 @@
+.price-sidebar {
+    width: 100%;
+    padding: 14px 12px;
+    background-color: white;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.price-filter {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  align-items: center;
+}
+.price-filter input {
+    width: 70px;
+    padding: 6px 8px;
+    font-size: 14px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+}
+
+.price-dash {
+    font-weight: bold;
+    color: #555;
+}

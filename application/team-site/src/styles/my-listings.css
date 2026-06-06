@@ -1,0 +1,314 @@
+.my-listings-page {
+  min-height: 100vh;
+  background-color: var(--bg-light);
+  color: var(--text);
+}
+
+.my-listings-container {
+  width: 100%;
+  max-width: 1900px;
+  margin: 0 auto;
+  padding: 14px 28px 36px 28px;
+}
+
+.my-listings-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.my-listings-header h1 {
+  font-size: 30px;
+  margin: 0 0 8px 0;
+  text-align: left;
+}
+
+.my-listings-header p {
+  color: var(--text-muted);
+  font-size: 15px;
+  margin: 0;
+}
+
+.my-listings-primary-btn {
+  background-color: var(--primary);
+  color: white;
+  padding: 11px 18px;
+  border-radius: 14px;
+  font-weight: 600;
+  font-size: 15px;
+  border: none;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.my-listings-primary-btn:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-1px);
+}
+
+.my-listings-panel {
+  background-color: white;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 22px;
+}
+
+.page-message {
+  margin: 20px 0;
+  color: var(--text-muted);
+  font-size: 15px;
+}
+
+.empty-state {
+  color: var(--text-muted);
+  font-size: 15px;
+  margin: 0;
+}
+
+.listing-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.listing-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background-color: #fff;
+  transition: opacity 0.35s ease, transform 0.35s ease, background-color 0.2s ease;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.listing-row:hover {
+  background-color: #f7f8fa;
+  cursor: pointer;
+}
+
+.listing-row-removing {
+  opacity: 0;
+  transform: translateX(30px);
+  pointer-events: none;
+}
+
+.listing-row-left {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  min-width: 0;
+  flex: 1;
+}
+
+.listing-thumb {
+  width: 92px;
+  height: 92px;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.listing-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.listing-thumb span {
+  font-size: 12px;
+  color: var(--text-muted);
+  text-align: center;
+  padding: 6px;
+}
+
+.listing-row-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-width: 0;
+}
+
+.listing-row-info h3 {
+  margin: 0 0 8px 0;
+  font-size: 18px;
+  color: var(--text);
+  text-align: left;
+}
+
+.listing-row-price {
+  margin: 0 0 10px 0;
+  color: var(--text);
+  font-weight: bold;
+  font-size: 15px;
+  text-align: left;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: left;
+}
+
+.status-badge.active {
+  background-color: #e7f3ff;
+  color: #1877f2;
+}
+
+.status-badge.pending {
+  background-color: #fff4d6;
+  color: #9a6700;
+}
+
+.status-badge.sold {
+  background-color: #fbeaea;
+  color: #b42318;
+}
+
+.listing-row-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.small-btn {
+  background-color: white;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  border-radius: 999px;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.small-btn:hover {
+  background-color: #f0f6ff;
+}
+
+.small-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* DELETE */
+.danger-btn {
+  color: #d81e10;
+  border: 1px solid #f0b6b6;
+  background-color: white;
+  transition: all 0.2s ease;
+}
+
+.listing-row-actions .danger-btn {
+  margin-left: 6px;
+}
+
+.danger-btn:hover {
+  background-color: #d81e10;
+  color: white;
+  border-color: #d81e10;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(180, 35, 24, 0.25);
+}
+
+.solid-danger-btn {
+  background-color: #d81e10;
+  color: white;
+  border-color: #d81e10;
+}
+
+.solid-danger-btn:hover {
+  background-color: #d81e10;
+}
+
+.small-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.listing-row:hover {
+  background-color: #f7f8fa;
+  cursor: pointer;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(5, 5, 5, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 20px;
+}
+
+.delete-modal {
+  width: 100%;
+  max-width: 460px;
+  background: white;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  padding: 28px 24px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
+}
+
+.delete-modal h2 {
+  margin: 0 0 10px;
+  font-size: 24px;
+  text-align: left;
+}
+
+.delete-modal p {
+  margin: 0;
+  color: var(--text-muted);
+  line-height: 1.55;
+  text-align: left;
+}
+
+.delete-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 900px) {
+  .my-listings-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .my-listings-primary-btn {
+    width: 100%;
+  }
+
+  .listing-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .listing-row-actions {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .my-listings-container {
+    padding: 14px 16px 30px 16px;
+  }
+}

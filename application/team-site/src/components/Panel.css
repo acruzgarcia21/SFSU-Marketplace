@@ -1,0 +1,53 @@
+.shared-panel {
+  background-color: white;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 22px;
+  min-width: 0;
+}
+
+.shared-panel__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.shared-panel__header-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.shared-panel__title {
+  margin: 0 0 6px 0;
+  font-size: 22px;
+  color: var(--text);
+  text-align: left;
+}
+
+.shared-panel__subtitle {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 15px;
+  text-align: left;
+  line-height: 1.45;
+}
+
+.shared-panel__action {
+  flex-shrink: 0;
+}
+
+.shared-panel__body {
+  min-width: 0;
+}
+
+/* REQUIRED SFSU BANNER */
+.app-banner {
+  font-size: 11px;
+  padding: 4px 10px;
+  background-color: #fafafa;
+  color: #777;
+  border-bottom: 1px solid #eee;
+}
